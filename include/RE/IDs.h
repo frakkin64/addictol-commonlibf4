@@ -16,7 +16,7 @@ namespace RE::ID
 		inline constexpr REL::VariantID ExitCover{ 770035, 2231166 };
 		inline constexpr REL::VariantID GetAimVector{ 554863, 2230378 };
 		inline constexpr REL::VariantID GetClosestBone{ 1180004, 2230051 };
-		inline constexpr REL::VariantID GetCollisionFilter{ REL::Offset{ 0x1D80640 }, 2277949 };  // OG: 1474995 this function calls the desired one inside itself, something like a Singleton.
+		inline constexpr REL::VariantID GetCollisionFilter{ 1474995, 2229991 };
 		inline constexpr REL::VariantID GetCombatStyle{ 1270929, 2231053 };
 		inline constexpr REL::VariantID SetCurrentAmmoCount{ 725546, 2229952 };
 		inline constexpr REL::VariantID GetCurrentCollisionGroup{ 410500, 2229993 };
@@ -636,6 +636,11 @@ namespace RE::ID
 		inline constexpr REL::VariantID EventIndex{ 1256916, 2663400 };
 	}
 
+	namespace BGSTerrainManager
+	{
+		inline constexpr REL::VariantID RecomputeQuickCullData{ 1483119, 2213622 };
+	}
+
 	namespace bhkCharacterController
 	{
 		inline constexpr REL::VariantID Jump{ 1067306, 2278191 };
@@ -672,11 +677,11 @@ namespace RE::ID
 		inline constexpr REL::VariantID SetStartEnd{ 747470, 2236622 };
 		inline constexpr REL::VariantID Reset{ 438299, 2277761 };
 		inline constexpr REL::VariantID HasHit{ 1181584, 2277770 };
-		inline constexpr REL::VariantID GetHitFraction{ 476687, 2277772 };
+		inline constexpr REL::VariantID GetHitFraction{ 476687, 2277771 };
 		inline constexpr REL::VariantID GetAllCollectorRayHitSize{ 1288513, 2277765 };
 		inline constexpr REL::VariantID GetAllCollectorRayHitAt{ 583997, 2277766 };
 		inline constexpr REL::VariantID SortAllCollectorHits{ 1274842, 2277767 };
-		inline constexpr REL::VariantID GetNiAVObject{ 863406, 2277764 };
+		inline constexpr REL::VariantID GetNiAVObject{ 863406, 2277763 };
 		inline constexpr REL::VariantID GetBody{ 1223055, 2277762 };
 	}
 
@@ -710,6 +715,7 @@ namespace RE::ID
 	namespace BSAudioManager
 	{
 		inline constexpr REL::VariantID Singleton{ 1321158, 2703058 };
+		inline constexpr REL::VariantID PlatformSingleton{ 1117951, 2267094 };
 		inline constexpr REL::VariantID GetSoundHandle{ 1419045, 2267105 };
 		inline constexpr REL::VariantID GetSoundHandleByName{ 196484, 2267104 };
 		inline constexpr REL::VariantID GetSoundHandleByFile{ 37039, 2267103 };
@@ -718,6 +724,12 @@ namespace RE::ID
 	namespace BSAwardsSystemUtility
 	{
 		inline constexpr REL::VariantID Singleton{ 1569384, 2255115 };
+	}
+
+	namespace BSCullingProcess
+	{
+		inline constexpr REL::VariantID Process1{ 409428, 2275931 };
+		inline constexpr REL::VariantID Process2{ 820910, 2275932 };
 	}
 
 	namespace BSGFxDisplayObject
@@ -912,6 +924,11 @@ namespace RE::ID
 		inline constexpr REL::VariantID ReplaceArray{ 445184, 2250435 };
 	}
 
+	namespace BSScript_BoundScript
+	{
+		inline constexpr REL::VariantID ClearProperties{ 1314501, 2314644 };
+	}
+
 	namespace BSScript_Internal_NativeFunctionBase
 	{
 		inline constexpr REL::VariantID Call{ 571037, 2314780 };
@@ -1069,6 +1086,18 @@ namespace RE::ID
 		inline constexpr REL::VariantID ConvertHalfToFloat{ 1502141, 2195843 };
 		inline constexpr REL::VariantID GetObjectByName{ 843650, 2274841 };
 		inline constexpr REL::VariantID GetFlattenedBoneTree{ 1539401, 2274858 };
+	}
+
+	namespace BSXAudio2Audio
+	{
+		inline constexpr REL::VariantID Singleton{ 1565436, 2703127 };
+	}
+
+	namespace BSXAudio2Graph
+	{
+		inline constexpr REL::VariantID Singleton{ 1219921, 2703127 };
+		inline constexpr REL::VariantID Ctor{ 799447, 2267547 };
+		inline constexpr REL::VariantID OnProcessingPassEnd{ 351273, 2267567 };
 	}
 
 	namespace Calendar
@@ -1249,6 +1278,7 @@ namespace RE::ID
 	{
 		inline constexpr REL::VariantID Singleton{ 198281, 2694399, 4801690 };
 		inline constexpr REL::VariantID IsComponentFavorite{ 352046, 2248752 };
+		inline constexpr REL::VariantID ToggleComponentFavorite{ 1084401, 2248750 };
 		inline constexpr REL::VariantID UseQuickkeyItem{ 303130, 2248744 };
 		inline constexpr REL::VariantID HandleEvent{ 1049251, 2248740 };
 		inline constexpr REL::VariantID ClearCurrentAmmoCount{ 541959, 2248745 };
@@ -1666,6 +1696,8 @@ namespace RE::ID
 		inline constexpr REL::VariantID QGameSystemsShouldUpdate{ 779552, 2698031 };
 		inline constexpr REL::VariantID QGameDataLoaded{ 1004331, 2698032 };
 		inline constexpr REL::VariantID SetCameraFOV{ 1348813, 2228973 };
+		inline constexpr REL::VariantID LandLODRoot{ 1208715, 2698035 };
+		inline constexpr REL::VariantID ObjectLODRoot{ 1115209, 2698036 };
 		inline constexpr REL::VariantID OnIdle{ 633524, 2228917 };
 	}
 
@@ -1704,7 +1736,7 @@ namespace RE::ID
 	{
 		inline constexpr REL::VariantID Singleton{ 695696, 2696546, 4803837 };
 		inline constexpr REL::VariantID CenterCursor{ 1107298, 2287473 };
-		inline constexpr REL::VariantID RegisterCursor{ 1318193, 2287475 };
+		inline constexpr REL::VariantID RegisterCursor{ 1318193, 2287485 };
 		inline constexpr REL::VariantID SetCursorConstraintsRaw{ 907092, 2287480 };
 		inline constexpr REL::VariantID UnregisterCursor{ 1225249, 2287486 };
 		inline constexpr REL::VariantID PipboyConstraintTLX{ 280077 };
@@ -1752,6 +1784,7 @@ namespace RE::ID
 		inline constexpr REL::VariantID BoundInFrustum{ 781526, 2194525 };
 		inline constexpr REL::VariantID WorldPtToScreenPt3{ 109441, 2270344 };
 		inline constexpr REL::VariantID ViewPointToRay{ 460613, 2270338 };
+		inline constexpr REL::VariantID ctor{ 1182532, 2270332 };
 	}
 
 	namespace NiControllerManager
@@ -1763,6 +1796,11 @@ namespace RE::ID
 	namespace NiControllerSequence
 	{
 		inline constexpr REL::VariantID Activate{ 829033, 2271861 };
+	}
+
+	namespace NiCullingProcess
+	{
+		inline constexpr REL::VariantID SetFrustum{ 1142496, 2270782 };
 	}
 
 	namespace NiMatrix3
@@ -1904,6 +1942,12 @@ namespace RE::ID
 		inline constexpr REL::VariantID UpdateCursorConstraint{ 900802, 2225488 };
 	}
 
+	namespace PipboyMapData
+	{
+		inline constexpr REL::VariantID GetTravelLocationRefr{ 501825, 2225515 };
+		inline constexpr REL::VariantID UpdateQuestMarkers{ 1440569, 2225549 };
+	}
+
 	namespace PipboyMapMenu
 	{
 		inline constexpr REL::VariantID UpdateData{ 92696, 2224074 };
@@ -2005,7 +2049,7 @@ namespace RE::ID
 			inline constexpr REL::VariantID dtor{ 542100, 2233293 };
 		}
 
-		inline constexpr REL::VariantID Singleton{ 303410, 2690919, 4798212 };
+		inline constexpr REL::VariantID Singleton{ 412034, 2690919, 4798212 };
 		inline constexpr REL::VariantID GetPlayerHandle{ 522947, 2698072 };
 		inline constexpr REL::VariantID GetDifficultyLevel{ 922962, 2233056 };
 		inline constexpr REL::VariantID IsGodMode{ 1032309, 2232986 };
@@ -2029,6 +2073,8 @@ namespace RE::ID
 		inline constexpr REL::VariantID TryUnlockObject{ 1341574, 2233040 };
 		inline constexpr REL::VariantID EnableRadio{ 741937, 2233211 };
 		inline constexpr REL::VariantID SetTintingData{ 802946, 2233185 };
+		inline constexpr REL::VariantID UpdateAnimation{ 740864, 2233005 };
+		inline constexpr REL::VariantID HandlePositionPlayerRequest{ 146861, 2232905 };
 	}
 
 	namespace PlayerControls
@@ -2235,6 +2281,7 @@ namespace RE::ID
 	namespace TES
 	{
 		inline constexpr REL::VariantID Singleton{ 1194835, 2698044 };
+		inline constexpr REL::VariantID UpdateMultiBoundVisibility{ 1281872, 2192134 };
 	}
 
 	namespace TESActivateEvent
@@ -2363,6 +2410,7 @@ namespace RE::ID
 	namespace TESFurniture
 	{
 		inline constexpr REL::VariantID GetContainer{ 1049933, 2198043 };
+		inline constexpr REL::VariantID Activate{ 37704, 2198054 };
 	}
 
 	namespace TESFurnitureEvent
@@ -2520,6 +2568,7 @@ namespace RE::ID
 		inline constexpr REL::VariantID GetMapMarkerData{ 253640, 2202644 };
 		inline constexpr REL::VariantID GetRelevantWaterHeight{ 6866, 2201189 };
 		inline constexpr REL::VariantID CanBeMoved{ 683719, 2200898 };
+		inline constexpr REL::VariantID HasLocationRefType{ 845267, 2202676 };
 	}
 
 	namespace TESObjectWEAP
@@ -2661,6 +2710,7 @@ namespace RE::ID
 	{
 		inline constexpr REL::VariantID DefaultWater{ 289864, 2691845, 4799138 };
 		inline constexpr REL::VariantID GetSkyCell{ 903020, 2202924 };
+		inline constexpr REL::VariantID AdjustMapMarkerCoord{ 896772, 2202880 };
 	}
 
 	namespace UI
@@ -2754,6 +2804,7 @@ namespace RE::ID
 	{
 		inline constexpr REL::VariantID CheckAndSetItemForPlacement{ 1541862, 2224991 };
 		inline constexpr REL::VariantID UpdateButtonText{ 1089189, 2224992 };
+		inline constexpr REL::VariantID ShouldShowTagForSearch{ 215177, 2225009 };
 	}
 
 	inline constexpr REL::VariantID NiFree{ 242362, 2268539 };

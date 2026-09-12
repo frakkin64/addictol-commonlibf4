@@ -11,6 +11,7 @@ namespace RE
 {
 	class BGSActorCellEvent;
 	class MapMarkerData;
+	class PipboyArray;
 	class PlayerUpdateEvent;
 	class TESLocationClearedEvent;
 
@@ -32,6 +33,11 @@ namespace RE
 	namespace LocationMarkerArrayUpdate
 	{
 		class Event;
+	}
+
+	namespace MapMarker
+	{
+		enum class MARKER_SCOPE;
 	}
 
 	namespace PlayerCharacterQuestEvent
@@ -83,6 +89,20 @@ namespace RE
 		virtual void Populate(bool a_arg1) override;  // 0B
 		virtual void DoClearData() override;          // 0C
 		virtual void DoClearSink() override;          // 0D
+
+		ObjectRefHandle GetTravelLocationRefr(ObjectRefHandle* a_result, std::uint32_t a_markerId)
+		{
+			using func_t = decltype(&PipboyMapData::GetTravelLocationRefr);
+			static REL::Relocation<func_t> func{ ID::PipboyMapData::GetTravelLocationRefr };
+			return func(this, a_result, a_markerId);
+		}
+
+		void UpdateQuestMarkers(PipboyArray& a_questMarkers, BSTHashMap<ObjectRefHandle, PipboyObject*>& a_questMarkerMap, MapMarker::MARKER_SCOPE a_scope, float a_heightReference)
+		{
+			using func_t = decltype(&PipboyMapData::UpdateQuestMarkers);
+			static REL::Relocation<func_t> func{ ID::PipboyMapData::UpdateQuestMarkers };
+			func(this, a_questMarkers, a_questMarkerMap, a_scope, a_heightReference);
+		}
 
 		// members
 		PipboyObject*                                   mapObject;                   // E8

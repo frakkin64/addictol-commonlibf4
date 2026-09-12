@@ -6,7 +6,7 @@
 #include "RE/B/BSStringT.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTHashMap.h"
-#include "RE/N/NiPoint2.h"
+#include "RE/N/NiPoint3.h"
 #include "RE/N/NiPointer.h"
 #include "RE/N/NiTMap.h"
 #include "RE/T/TESForm.h"
@@ -89,6 +89,13 @@ namespace RE
 				static REL::Relocation<TESWaterForm**> defaultWater{ ID::TESWorldSpace::DefaultWater };
 				return *defaultWater;
 			}
+		}
+
+		void AdjustMapMarkerCoord(NiPoint3* a_mapCoord, bool a_inverse)
+		{
+			using func_t = decltype(&TESWorldSpace::AdjustMapMarkerCoord);
+			static REL::Relocation<func_t> func{ ID::TESWorldSpace::AdjustMapMarkerCoord };
+			return func(this, a_mapCoord, a_inverse);
 		}
 
 		// members
